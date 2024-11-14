@@ -4,15 +4,14 @@ An exploration of sorting in Java.
 
 Authors
 
-* Your name here.
+* Moise Milenge
 * Samuel A. Rebelsky (starter code)
 
 Acknowledgements
 
 * _Forthcoming_.
 
-This code may be found at <https://github.com/USERNAME/mp-sorting-maven>. The original code may be found at <https://github.com/Grinnell-CSC207/mp-sorting-maven>.
-
+This code may be found athttps://github.com/moistr203/mp-sorting-maven.git
 Description of custom sorting algorithm
 ---------------------------------------
 
