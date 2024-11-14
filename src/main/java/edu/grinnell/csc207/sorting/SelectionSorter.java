@@ -3,14 +3,14 @@ package edu.grinnell.csc207.sorting;
 import java.util.Comparator;
 
 /**
- * Something that sorts using selection sort.
+ * A sorter that uses selection sort.
  *
  * @param <T>
  *   The types of values that are sorted.
  *
- * @author Samuel A. Rebelsky
+ * author Samuel A. Rebelsky
+ * author Moise Milenge
  */
-
 public class SelectionSorter<T> implements Sorter<T> {
   // +--------+------------------------------------------------------
   // | Fields |
@@ -55,6 +55,24 @@ public class SelectionSorter<T> implements Sorter<T> {
    */
   @Override
   public void sort(T[] values) {
-    // STUB
+    int n = values.length;
+    for (int i = 0; i < n - 1; i++) { // Start of outer loop
+      // Assume the minimum is the current index
+      int minIndex = i;
+
+      // Find the smallest element in the unsorted portion
+      for (int j = i + 1; j < n; j++) { // Start of inner loop
+        if (order.compare(values[j], values[minIndex]) < 0) {
+          minIndex = j;
+        }
+      } // end of inner loop
+
+      // Swap if a smaller element was found
+      if (minIndex != i) {
+        T temp = values[i];
+        values[i] = values[minIndex];
+        values[minIndex] = temp;
+      }
+    } // end of outer loop
   } // sort(T[])
 } // class SelectionSorter

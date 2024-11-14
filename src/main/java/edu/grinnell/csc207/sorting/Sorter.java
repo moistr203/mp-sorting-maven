@@ -24,4 +24,3 @@ public interface Sorter<T> {
    */
   public void sort(T[] values);
 } // interface Sorter<T>
-
